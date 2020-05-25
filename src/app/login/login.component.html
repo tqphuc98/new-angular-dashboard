@@ -1,0 +1,31 @@
+<div class="login">
+    <mat-spinner *ngIf="!showSpinner"></mat-spinner>
+    <mat-card *ngIf="showSpinner">
+        <div id="login-form">
+            <mat-card-header>
+                <mat-card-title>
+                    Angular demo
+                </mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <form class="example-form">
+                    <mat-form-field class="login-input">
+                        <mat-label>ID</mat-label>
+                        <input (keyup.enter)="onLogin()" [ngModelOptions]="{standalone: true}" type="text"
+                            [(ngModel)]="username" matInput placeholder="Mời nhập ID">
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field class="login-input">
+                        <mat-label>Mật khẩu</mat-label>
+                        <input (keyup.enter)="onLogin()" [ngModelOptions]="{standalone: true}" type="password"
+                            [(ngModel)]="password" matInput placeholder="Mời nhập mật khẩu">
+                    </mat-form-field>
+                </form>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-flat-button type="submit" (click)=onLogin()>Đăng nhập</button>
+            </mat-card-actions>
+        </div>
+    </mat-card>
+</div>

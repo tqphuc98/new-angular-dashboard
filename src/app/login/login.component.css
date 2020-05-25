@@ -1,0 +1,32 @@
+.login {
+  background-image: linear-gradient(to bottom right,black, white);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+mat-card-header {
+  margin-left: 50px;
+}
+mat-card-content {
+  margin: 10px 40px;
+}
+mat-card-actions {
+  text-align: center;
+  margin-bottom: 0px;
+}
+mat-card-actions button {
+ border: 1px solid  #b5b5b5;
+}
+mat-card-actions button:focus {
+  outline: none;
+}
+.login-input {
+  width: 100%;
+}
+
+
+
+
+

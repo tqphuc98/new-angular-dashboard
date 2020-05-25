@@ -1,0 +1,8 @@
+<div class="input-group">
+    <input #nameInput type="text" class="form-control" placeholder="Nhập tên sinh viên"
+      aria-label="Recipient's username with two button addons" aria-describedby="button-addon4">
+    <div class="input-group-append" id="button-addon4">
+      <button class="btn btn-outline-secondary" type="button"
+        (click)="add(nameInput.value); nameInput.value=''">Thêm</button>
+    </div>
+  </div>

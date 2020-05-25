@@ -1,0 +1,31 @@
+<div class="container-fluid">
+  <h1 style="text-align: center">Danh sách sinh viên</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Country</th>
+        <th scope="col">Phone Number</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of students" (click)="onSelect(student)">
+        <th scope="row"> {{ student.id }}</th>
+        <td> {{ student.name }}</td>
+        <td> {{student.country}} </td>
+        <td> {{student.phonenumber}} </td>
+        <button (click)="delete(student.id)" type="button" class="btn btn-danger">X</button>
+      </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="selectedStudent" class="input-group" style="margin-top: 25px;">
+    <input [(ngModel)]="selectedStudent.name" type="text" class="form-control" placeholder="Recipient's username"
+        aria-label="Recipient's username with two button addons" aria-describedby="button-addon4">
+    <div class="input-group-append" id="button-addon4">
+        <button class="btn btn-outline-secondary" type="button" (click)="edit()">Sửa</button>
+    </div>
+</div>
+</div>
